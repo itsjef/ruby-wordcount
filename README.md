@@ -1,3 +1,8 @@
+Chạy `ruby word_count.rb` và nhập tên file `input.txt` để  thấy kết quả 
+
+Đề bài
+======
+
 Viết một chương trình đọc 1 file text (tên file nhập vào từ bàn phím), rồi tính số lần xuất hiện của từng từ trong file đó, kèm theo các dòng mà từ đó xuất hiện: (case-insensitive)
 
 **Ví dụ**: input file *word.input* có nội dung:
