@@ -1,0 +1,2 @@
+OpenStack has support for both Object Storage and Block Storage, with many deployment options for each depending on the use case.
+Object Storage is ideal for cost effective, scale-out storage.
