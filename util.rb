@@ -12,15 +12,15 @@ def process(sentences)
     words = sentence.split
     # iterate through the list of words
     words.each do |word|
-      line = index + 1
-      unless dict[word]
-        # create new entry if word is not in out dict yet
-        dict[word] = { count: 1, lines: [line] } 
+      line = index + 1   # because index start with 0, line should start with 1
+      key  = word.to_sym # use symbol to avoid burdening memory with repetitive identical string
+      unless dict[key]
+        dict[key] = { count: 1, lines: [line] } # create new entry if word is not in out dict yet
       else
         # if we already have the word, 
         # increment its appearance by 1 and record which line it appears
-        dict[word][:count] += 1
-        dict[word][:lines] << line unless dict[word][:lines].include?(line)
+        dict[key][:count] += 1
+        dict[key][:lines] << line unless dict[key][:lines].include?(line)
       end
     end
   end

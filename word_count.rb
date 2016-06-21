@@ -2,6 +2,7 @@ require_relative 'util'
 
 print "Enter file name: "
 filename = gets.chomp # Get input from user
+#filename = 'input.txt' # uncomment this line for the sake of testing
 
 begin 
   # Open file to read
@@ -12,7 +13,7 @@ begin
   sentences  = purify(contents)
   # Map input to a hash table contains each word as key, 
   # numbers of appearance and lines it appears as value
-  # format: { "word" => { count: 1, lines: [1, 2] }
+  # format: { :word => { count: 1, lines: [1, 2] }
   dictionary = process(sentences)
   # Show what we get
   display(dictionary)
